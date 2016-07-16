@@ -1,0 +1,1 @@
+# signetpay-cordova-plugin

@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.signetpay.cordova" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+  <name>SignetPaymentProcessor</name>
+  <description>Signetpay's Cordova Plugin for Payments</description>
+  <author>Signetpay</author>
+  <keywords>signetpay,payments,paymentgateway</keywords>
+
+  <engines>
+  <engine name="cordova" version=">=3.4.0" />
+  </engines>
+
+  <asset src="www/SignetPaymentProcessor.js" target="js/SignetPaymentProcessor.js" />
+  <js-module name="SignetPaymentProcessor" src="www/SignetPaymentProcessor.js">
+    <clobbers target="SignetPaymentProcessor" />
+  </js-module>
+
+  <platform name="android">
+    <config-file parent="/*" target="res/xml/config.xml">
+      <feature name="SignetPaymentProcessor">
+        <param name="android-package" value="com.signetpay.cordova.SignetPaymentProcessor" />
+      </feature>
+    </config-file>
+
+    <config-file parent="/*" target="AndroidManifest.xml">
+      <activity  android:configChanges="orientation|screenSize|screenLayout" android:label="@string/app_name" android:name="com.signetpay.android.PgWebpageView">
+      </activity>
+    </config-file>
+
+    <framework custom="true" src="src/android/signet.gradle" type="gradleReference" />
+    <framework src="com.android.support:design:23.1.1"/>
+    <framework src="com.android.support:appcompat-v7:23.1.1"/>
+    <framework src="com.android.support:support-v4:23.1.1"/>
+    <source-file src="src/android/SignetPaymentProcessor.java" target-dir="src/com/signetpay/cordova" />
+    <source-file src="src/android/ResponseHandler.java" target-dir="src/com/signetpay/cordova" />
+    <resource-file src="src/android/libs/signetpayandroidsdk-release.aar" target="libs/signetpayandroidsdk-release.aar" />
+  </platform>
+</plugin>

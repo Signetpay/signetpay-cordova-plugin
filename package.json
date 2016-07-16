@@ -1,0 +1,34 @@
+{
+  "name": "SignetPaymentProcessor",
+  "version": "0.0.1",
+  "description": "Signetpay's Cordova Plugin for Payments",
+  "cordova": {
+    "id": "com.signetpay.cordova",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Signetpay/signetpay-cordova-plugin.git"
+  },
+  "keywords": [
+    "signetpay",
+    "payments",
+    "paymentgateway",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.4.0"
+    }
+  ],
+  "author": "Signetpay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Signetpay/signetpay-cordova-plugin/issues"
+  },
+  "homepage": "https://github.com/Signetpay/signetpay-cordova-plugin#readme"
+}

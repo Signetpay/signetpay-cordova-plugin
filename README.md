@@ -1,5 +1,5 @@
 # signetpay-cordova-plugin
-Official Cordova plugin for integrating Signet Payment Gateway. (Only Android OS Suppot)
+Official Cordova plugin for integrating Signet Payment Gateway. (Only Android OS Support)
 
 How to guide:
 ### Install the plugin
